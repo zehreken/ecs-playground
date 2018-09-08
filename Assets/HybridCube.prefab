@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4116765458912876}
   - component: {fileID: 33538702215782234}
   - component: {fileID: 23360893086470020}
+  - component: {fileID: 114640187771954116}
   - component: {fileID: 114702065628921968}
   m_Layer: 0
   m_Name: HybridCube
@@ -84,6 +85,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1061508863539814}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &114640187771954116
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1061508863539814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bf10cdea1344482e91a4f2b58506b77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114702065628921968
 MonoBehaviour:
   m_ObjectHideFlags: 1
