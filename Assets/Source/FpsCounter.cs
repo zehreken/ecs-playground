@@ -6,14 +6,18 @@ namespace zehreken.i_cheat
 	public class FpsCounter : MonoBehaviour
 	{
 		private const int BufferLength = 100;
-		private float[] _buffer = new float[BufferLength];
+		private readonly float[] _buffer = new float[BufferLength];
 		private int _bufferIndex = 0;
-		private float _fps = 0f;
+		private float _deltaTime = 0f;
 		public Text Text;
 
 		void Update()
 		{
-			_buffer[_bufferIndex] = Time.deltaTime;
+			_deltaTime += (Time.deltaTime - _deltaTime) * 0.1f;
+			float miliseconds = _deltaTime * 1000f;
+			var fps = 1 / _deltaTime;
+			
+			_buffer[_bufferIndex] = fps;
 			_bufferIndex++;
 			if (_bufferIndex == 100) _bufferIndex = 0;
 
@@ -23,9 +27,8 @@ namespace zehreken.i_cheat
 				sum += _buffer[i];
 			}
 
-			float averageTime = sum / BufferLength;
-			_fps = 1f / averageTime;
-			Text.text = "FPS: " + _fps.ToString("N2");
+			float averageFps = sum / BufferLength;
+			Text.text = string.Format("{0:0.0} ms ({1:0.} fps) ({2:0.0} average fps)", miliseconds,  fps, averageFps);
 		}
 	}
 }
