@@ -20,7 +20,6 @@ namespace Hybrid
 
 		protected override void OnUpdate()
 		{
-			Debug.Log("testing");
 			// We can immediately see a first optimization.
 			// We know delta time is the same between all rotators,
 			// so we can simply keep it in a local variable 
