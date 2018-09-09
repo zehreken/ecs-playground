@@ -8,13 +8,15 @@ namespace zehreken.i_cheat
 		private const int BufferLength = 100;
 		private readonly float[] _buffer = new float[BufferLength];
 		private int _bufferIndex = 0;
-		private float _deltaTime = 0f;
+		public float _deltaTime = 0f;
 		public Text Text;
 
 		void Update()
 		{
+			// This is just for preventing the fluctuation, _deltaTime = Time.deltaTime is also fine
 			_deltaTime += (Time.deltaTime - _deltaTime) * 0.1f;
 			float miliseconds = _deltaTime * 1000f;
+			
 			var fps = 1 / _deltaTime;
 			
 			_buffer[_bufferIndex] = fps;
