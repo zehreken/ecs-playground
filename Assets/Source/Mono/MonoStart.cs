@@ -20,13 +20,19 @@ namespace Mono
 
 		void Update()
 		{
-			if (Input.GetKeyUp(KeyCode.Alpha0))
+			if (Input.GetKeyUp(KeyCode.Alpha1))
 			{
 				SceneManager.LoadScene(0);
 			}
-			if (Input.GetKeyUp(KeyCode.Alpha1))
+
+			if (Input.GetKeyUp(KeyCode.Alpha2))
 			{
 				SceneManager.LoadScene(1);
+			}
+
+			if (Input.GetKeyUp(KeyCode.Alpha3))
+			{
+				SceneManager.LoadScene(2);
 			}
 		}
 	}
