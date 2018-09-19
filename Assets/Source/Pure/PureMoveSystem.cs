@@ -7,7 +7,7 @@ namespace Pure
 	{
 		public struct CubeGroup
 		{
-			public int Length;
+			public readonly int Length;
 			public ComponentDataArray<Speed> speed;
 			public ComponentDataArray<Trns> transform;
 		}
