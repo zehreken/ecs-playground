@@ -1,4 +1,5 @@
 ﻿using Unity.Entities;
+using Unity.Transforms;
 using UnityEngine;
 
 namespace Pure
@@ -9,7 +10,7 @@ namespace Pure
 		{
 			public readonly int Length;
 			public ComponentDataArray<Speed> speed;
-			public ComponentDataArray<Trns> transform;
+			public ComponentDataArray<Rotation> rotation;
 		}
 
 		[Inject] private CubeGroup cubes;
